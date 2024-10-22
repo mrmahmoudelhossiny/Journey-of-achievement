@@ -1,0 +1,192 @@
+/* تنسيقات أساسية */
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #4caf50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button.spend {
+    background-color: #e74c3c;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* تحسين المظهر للمدخلات */
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 25px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* تحسين مظهر المهام */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background-color: #e8f5e9;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* الميزانية */
+.balance {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.balance.red {
+    color: #e74c3c;
+}
+
+.balance.green {
+    color: #4caf50;
+}
+
+/* المعاملات */
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transaction.add {
+    background-color: #e0ffe0;
+    color: #2ecc71;
+}
+
+.transaction.spend {
+    background-color: #ffe0e0;
+    color: #e74c3c;
+}
+
+/* الرسائل التشجيعية */
+.completedMessage {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* قسم الإنجاز */
+.goal-input {
+    margin-bottom: 20px;
+}
+
+#progressPercentage {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+#budgetDisplay,
+#remainingTasksDisplay {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* تصميم إضافي */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: calc(100% - 20px);
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة الإنجاز
+</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>رحلة الإنجاز
+</h1>
+        <div class="tabs">
+            <button onclick="showSection('tasks')">المهام اليومية</button>
+            <button onclick="showSection('budget')">الميزانية</button>
+            <button onclick="showSection('goals')">الإنجاز</button>
+        </div>
+        <div id="tasks" class="section active">
+            <h2>المهام اليومية</h2>
+            <input type="text" id="taskInput" placeholder="أضف مهمة جديدة" />
+            <button onclick="addTask()">إضافة</button>
+            <button onclick="deleteCompletedTasks()">حذف المهام المنجزة</button>
+            <button onclick="deleteAllTasks()">حذف كل المهام</button>
+            <ul id="taskList"></ul>
+        </div>
+        <div id="budget" class="section">
+            <h2>الميزانية</h2>
+            <p>المبلغ الكلي: <span id="totalBalance" class="balance">0</span> جنيه</p>
+            <div id="initialBudgetSection">
+                <input type="number" id="initialBudgetInput" placeholder="أدخل مبلغ البداية" />
+                <button onclick="setInitialBudget()">تعيين مبلغ البداية</button>
+            </div>
+            <div id="transactionSection" style="display: none;">
+                <input type="number" id="amountInput" placeholder="أدخل المبلغ" />
+                <input type="text" id="noteInput" placeholder="أدخل ملاحظة (اختياري)" />
+                <button onclick="addTransaction('add')">إضافة مبلغ</button>
+                <button onclick="addTransaction('spend')" class="spend">صرف مبلغ</button>
+            </div>
+            <ul id="transactionList"></ul>
+        </div>
+       <div id="goals" class="section">
+    <h2>الإنجاز</h2>
+    <div id="goalMessage" class="goal-message">
+        <!-- سيتم تحديث النص هنا -->
+    </div>
+    <div id="goalProgress">
+        <p>نسبة التقدم: <span id="progressPercentage">0</span>%</p>
+    </div>
+    <div id="budgetDisplay">الميزانية الحالية: <span id="currentBudgetDisplay">0</span> جنيه</div>
+    <div id="remainingTasksDisplay">عدد المهام غير المنجزة: <span id="remainingTasksCount">0</span></div>
+</div>
+
+            <div id="subGoalsSection" style="display:none;">
+                <input type="text" id="subGoalInput" placeholder="أضف هدف فرعي" />
+                <button onclick="addSubGoal()">إضافة هدف فرعي</button>
+                <ul id="subGoalList"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
